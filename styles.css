@@ -1,0 +1,225 @@
+/* ==== GLOBAL ====== */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #051D3B;
+    font-family: Inter, sans-serif;
+    font-size: 1.3rem;
+}
+
+h1, h2, p, span {
+    color: #fff;
+}
+
+a { 
+    text-decoration: none;
+}
+
+input,
+select {
+    border-radius: 8px;
+    padding: 10px;
+
+    background: #21446e;
+    border: none;
+}
+
+::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.507);
+    font-family: Inter;
+ }
+/* ==== HEADER ====== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 95%;
+    margin: 1rem auto;
+}
+
+
+
+header input {
+    width: 50vw;
+    height: 3rem;
+}
+/* ==== MAIN ====== */
+main {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+/* ==== Barra de navegação ====== */
+nav.menu {
+    width: 20vw;
+}
+
+nav h2,
+section h2 {
+    font-size: 0.8rem;
+    Line-height: 18px;
+
+    margin-bottom: 1rem;
+    font-weight: lighter;
+}
+
+.navLinks {
+    margin-bottom: 1rem;
+}
+
+.navLinks  a {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+ 
+.navLinks a img {
+    margin: 0 15px 0 0;
+}
+
+.navLinks a p {
+    font-size: 1rem;
+}
+/* ==== Sessão para escrever o código ====== */
+.codeField {
+    display: flex;
+    flex-direction: column;
+
+    width: 50vw;
+    height: 50vh;
+
+    border: 32px #6BD1FF solid;
+    border-radius: 8px;
+}
+
+
+.macButtons {
+    padding: 0.5rem 0 1rem 1rem;
+    background: #141414;
+}
+
+div textarea {
+    height: 36vh;
+}
+textarea {
+    width: 100%;
+    height: 85%;
+    background: #141414;
+    color: #fff;
+    
+    resize: none;
+
+    border: none;
+    border-radius: 8px;
+    padding: 1rem;
+    
+    font-family: Roboto Mono, sans-serif;
+    line-height: 1.25rem;
+}
+
+.codeField button{ 
+    margin-top: 5rem;
+    width: 100%;
+    border: none;
+    padding: 1rem;
+
+    background: #5080fb38;
+    color: #FFFFFF;
+
+    font-size: 1rem;
+
+}
+/* ==== Sessão de descrição de projeto ====== */
+.project {
+    /* border: 2px solid white; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: 18vw;
+}
+
+.project input {
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.projectName,
+select {
+    padding: 1rem 0 1rem 0.5rem;
+}
+
+.projectDescription {
+    padding: 1rem 0 3rem 0.5rem;
+}
+
+form h2 {
+    margin-top: 2rem;
+}
+
+select {
+    width: 100%;
+    color: rgba(255, 255, 255, 0.507);
+
+    margin-bottom: 1rem;
+}
+
+#colorSelector {
+    padding: 0.25rem 0.25rem;
+    height: 3.5rem;
+
+    border: 0.5px white solid;
+}
+
+form button {
+    width: 100%;
+    padding: 1rem 0.5rem;
+    border: none;
+    border-radius: 8px;
+    
+    background: #5081FB;
+    color: #051D3B;
+
+    font-size: 1rem;
+}
+
+
+
+/* ==== RESPONSIVE ====== */
+@media (max-width: 800px) {
+    main {
+        flex-wrap: wrap;
+        width: 90%;
+        margin: auto;
+    }
+
+     nav {
+        display: none;
+        visibility: hidden;
+        z-index: 999;
+        opacity: 0;
+    }
+
+   .codeField,
+   .project{
+       width: 100%;
+    
+   }
+
+   .project {
+    margin-top: 7rem;  
+    align-items: center;
+
+   }
+
+   .project input{
+       margin-right: 9rem;
+ }
+}

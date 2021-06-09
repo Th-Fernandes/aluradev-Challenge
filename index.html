@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alura DEV - Seu editor de código</title>
+
+    <!--área de links-->
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <img src="./images/logo.svg" alt="logo da aluraDev" />
+
+      <input type="text" placeholder="Busque por algo" />
+
+      <a href="#">
+        <img src="./images/author.png" alt="perfil do usuário" />
+      </a>
+    </header>
+
+    <main>
+      <nav class="menu">
+        <!--menu de navegação parte esquerda-->
+        <h2>M E N U</h2>
+
+        <div class="navLinks">
+          <a href="#">
+            <img src="./images/Icon.svg" alt="" />
+
+            <p>Editor de código</p>
+          </a>
+        </div>
+
+        <div class="navLinks">
+          <a href="#">
+            <img src="./images/comunity-icon.svg" alt="" />
+
+            <p>comunidade</p>
+          </a>
+        </div>
+      </nav>
+
+      <section class="codeField">
+        
+          <div class="macButtons">
+            <img src="./images/red-button.svg" alt="" />
+            <img src="./images/yellow-button.svg" alt="" />
+            <img src="./images/green-button.svg" alt="" />
+          </div>
+
+          <div>
+          <textarea name="code">
+const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+
+ const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+
+ const unfold = (f, seed) => {
+    const go = (f, seed, acc) => {
+       const res = f(seed)
+       return res ? go(f, res[1], acc.concat([res[0]])) : acc
+        }
+        return go(f, seed, [])
+      }
+      </textarea
+          >
+
+        </div>
+
+      <button>Visualizar com o highlight</button>
+        
+      </section>
+
+      <section class="project">
+        <h2>S E U P R O J E T O</h2>
+
+        <form action="">
+          <label for="projectName">
+            <input
+              class="projectName"
+              type="text"
+              placeholder="Nome do seu projeto"
+              id="projectName"
+              required
+            />
+          </label>
+
+          <label for="projectDescription">
+            <input
+              class="projectDescription"
+              type="text"
+              placeholder="Descrição do seu projeto"
+              required
+            />
+          </label>
+
+          <div class="style">
+            <h2>P E R S O N A L I Z A Ç Ã O</h2>
+
+            <select name="programingLanguage" id="">
+              <option value="javascript">javascript</option>
+              <option value="python">python</option>
+              <option value="c#">c#</option>
+            </select>
+
+            <label for="colorSelector"></label>
+            <input type="color" id="colorSelector" value="#6BD1FF" required />
+          </div>
+
+          <label for="submit"></label>
+          <button type="submit" id="submit" required>Salvar projeto</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
