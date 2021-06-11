@@ -1,4 +1,5 @@
 const codeDiv = document.querySelector('#editableCode');
+const border = document.querySelector('.codeField');
 const programingLanguage = document.querySelector('#linguagem');
 const previewButton = document.querySelector('#previewButton');
 
@@ -19,11 +20,10 @@ previewButton.addEventListener('click', () => {
 })
 
 
-
 const cor = document.querySelector('#colorSelector');
 
 cor.addEventListener('change', () => {
     const valor = cor.value;
     console.log(valor);
-    codeDiv.style.backgroundColor = valor;
+    document.querySelector('.codeField').style.border = "32px solid " + valor;
 })
