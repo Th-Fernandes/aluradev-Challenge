@@ -25,14 +25,29 @@ select {
     border-radius: 8px;
     padding: 10px;
 
-    background: #21446e;
+    background: #ffffff2c;
     border: none;
+    transition: background 1s;
+
+    color: white;
+}
+
+input:hover,
+select:hover {
+    background: #ffffff59;
+    ;
 }
 
 ::-webkit-input-placeholder {
     color: rgba(255, 255, 255, 0.507);
     font-family: Inter;
  }
+
+ button {
+     cursor: pointer;
+     transition: background 1s;
+ }
+
 /* ==== HEADER ====== */
 header {
     display: flex;
@@ -43,11 +58,25 @@ header {
     margin: 1rem auto;
 }
 
-
-
 header input {
     width: 50vw;
     height: 3rem;
+}
+
+header a {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 7rem;
+    padding: 0.5rem 0;
+
+    border-radius: 8px;
+    transition: background 1s;
+}
+
+header a:hover{
+    background: #ffffff2c;
 }
 /* ==== MAIN ====== */
 main {
@@ -83,9 +112,19 @@ section h2 {
     margin: 0 15px 0 0;
 }
 
+.navLinks a {
+    transition: background 1s;
+    border-radius: 8px;
+}
+.navLinks a:hover {
+    background: #7BA4FC;
+    
+}
+
 .navLinks a p {
     font-size: 1rem;
 }
+
 /* ==== Sessão para escrever o código ====== */
 .codeField {
     display: flex;
@@ -104,36 +143,42 @@ section h2 {
     background: #141414;
 }
 
-div textarea {
-    height: 36vh;
+#editableCode {
+    display:flex;
+    justify-content: center;
+
+    height: 100%;
 }
-textarea {
+
+#editableCode code {
     width: 100%;
-    height: 85%;
+    padding: 1rem;
+
     background: #141414;
-    color: #fff;
-    
-    resize: none;
-
-    border: none;
-    border-radius: 8px;
-    padding: 1rem;
-    
-    font-family: Roboto Mono, sans-serif;
-    line-height: 1.25rem;
 }
 
-.codeField button{ 
-    margin-top: 5rem;
+#editableCode code:focus {
+    outline: none;
+}
+
+#previewButton{ 
+    margin-top: 2rem;
     width: 100%;
     border: none;
     padding: 1rem;
 
-    background: #5080fb38;
+    background: #5080fb34;
     color: #FFFFFF;
 
     font-size: 1rem;
+}
 
+#previewButton:hover{
+    background: #5080fb52;
+}
+
+#previewButton:focus {
+    background: #5080fb4d;
 }
 /* ==== Sessão de descrição de projeto ====== */
 .project {
@@ -188,6 +233,14 @@ form button {
     color: #051D3B;
 
     font-size: 1rem;
+}
+
+form button:hover{
+    background: #7BA4FC;
+}
+
+form button:focus {
+    background: #96B9FD;
 }
 
 
